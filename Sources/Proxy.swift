@@ -60,7 +60,7 @@ extension Proxy /*: Functor*/ {
 	public typealias B = Any
 	public typealias FB = Proxy<B>
 
-	public func fmap<B>(_ f : (A) -> B) -> Proxy<B> {
+	public func fmap<B>(_ f : @escaping (A) -> B) -> Proxy<B> {
 		return Proxy<B>()
 	}
 }

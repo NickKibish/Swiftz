@@ -10,7 +10,7 @@
 public protocol Monad : Applicative {
 	/// Sequences and composes two monadic actions by passing the value inside
 	/// the monad on the left to a function on the right yielding a new monad.
-	func bind(_ f : (A) -> FB) -> FB
+	func bind(_ f : @escaping (A) -> FB) -> FB
 }
 
 public protocol MonadOps : Monad {
